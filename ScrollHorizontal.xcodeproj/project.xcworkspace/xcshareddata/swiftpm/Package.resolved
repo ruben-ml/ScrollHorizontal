@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "layoutdsl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AlvaroOlave/LayoutDSL",
+      "state" : {
+        "revision" : "b6433cc7b367e7ceed249309d5f7ee244dd3ba4e",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
