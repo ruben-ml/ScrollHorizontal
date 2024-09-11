@@ -62,9 +62,9 @@ final class CustomTabView: UIView {
     func addGesture(_ transition: TabViewTransition) {
         switch transition {
         case .moveToLeft:
-            addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveToRight)))
-        case .moveToRight:
             addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveToLeft)))
+        case .moveToRight:
+            addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveToRight)))
         }
     }
     

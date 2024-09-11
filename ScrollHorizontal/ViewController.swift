@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         let button = CustomTabView(config: TabViewOption(title: "Left", icon: "arrowshape.left.circle", alpha: 1.0))
         button.translatesAutoresizingMaskIntoConstraints = false
         button.delegate = self
-        button.addGesture(.moveToRight)
+        button.addGesture(.moveToLeft)
         return button
     }()
     
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         let button = CustomTabView(config: TabViewOption(title: "Right", icon: "arrowshape.right.circle", alpha: 0.0))
         button.translatesAutoresizingMaskIntoConstraints = false
         button.delegate = self
-        button.addGesture(.moveToLeft)
+        button.addGesture(.moveToRight)
         return button
     }()
     
