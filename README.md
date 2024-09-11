@@ -9,4 +9,4 @@ AutolayoutDSL via SPM
 
 # Usage
 
-Tabs with scrollview horizontal to show differents views and animate underline view when clicking on the tab.
+Tabs with scrollview horizontal to show differents views and animate underline view when clicking on the tab and swipe scroll.
