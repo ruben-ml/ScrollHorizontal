@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         let scrollView = UIScrollView()
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.bounces = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
