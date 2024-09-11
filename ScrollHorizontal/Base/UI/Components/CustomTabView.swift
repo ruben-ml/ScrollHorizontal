@@ -20,8 +20,8 @@ enum TabViewTransition {
 }
 
 protocol TabViewTransitionDelegate {
-   func moveToLeft()
-   func moveToRight()
+    func moveToRight()
+    func moveToLeft()
 }
 
 final class CustomTabView: UIView {
@@ -62,9 +62,9 @@ final class CustomTabView: UIView {
     func addGesture(_ transition: TabViewTransition) {
         switch transition {
         case .moveToLeft:
-            addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveToLeft)))
-        case .moveToRight:
             addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveToRight)))
+        case .moveToRight:
+            addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moveToLeft)))
         }
     }
     
@@ -86,13 +86,13 @@ private extension CustomTabView {
     func setupConstraints() {
         iconImage.layout {
             $0.top == topAnchor
-            $0.leading == leadingAnchor + 5.0
+            $0.leading == leadingAnchor + 10.0
             ($0.width, $0.height) == (30.0 * 30.0)
         }
         
         titleLabel.layout {
             $0.centerY == iconImage.centerYAnchor
-            $0.leading == iconImage.trailingAnchor + 5.0
+            $0.leading == iconImage.trailingAnchor + 10.0
         }
         
         underlineView.layout {
@@ -109,11 +109,11 @@ private extension CustomTabView {
         underlineView.alpha = config.alpha
     }
     
-    @objc func moveToLeft() {
-        delegate?.moveToLeft()
-    }
-    
     @objc func moveToRight() {
         delegate?.moveToRight()
+    }
+    
+    @objc func moveToLeft() {
+        delegate?.moveToLeft()
     }
 }
