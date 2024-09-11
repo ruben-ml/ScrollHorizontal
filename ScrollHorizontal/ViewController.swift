@@ -63,7 +63,6 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
-        navigationItem.title = "ScrollView Horizontal"
     }
     
     override func viewWillAppear(_ animated: Bool) {
