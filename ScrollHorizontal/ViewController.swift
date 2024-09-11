@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     
     private lazy var detailView: UIView = {
         let view = UIView()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .green
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -122,16 +122,16 @@ private extension ViewController {
 extension ViewController: TabViewTransitionDelegate {
     func moveToLeft() {
         if scrollView.contentOffset.x > 0 {
-            leftButton.animateUnderlineView(alpha: 1)
-            rightButton.animateUnderlineView(alpha: 0)
+            leftButton.animateUnderlineView(alpha: 1, color: .orange)
+            rightButton.animateUnderlineView(alpha: 0, color: .clear)
             scrollView.contentOffset.x -= view.bounds.width
         }
     }
     
     func moveToRight() {
         if scrollView.contentOffset.x < (scrollView.contentSize.width - view.frame.width) {
-            rightButton.animateUnderlineView(alpha: 1)
-            leftButton.animateUnderlineView(alpha:  0)
+            rightButton.animateUnderlineView(alpha: 1, color: .green)
+            leftButton.animateUnderlineView(alpha:  0, color: .clear)
             scrollView.contentOffset.x += view.bounds.width
         }
     }

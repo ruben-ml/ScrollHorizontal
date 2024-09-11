@@ -40,7 +40,7 @@ final class CustomTabView: UIView {
     
     private lazy var underlineView: UIView = {
         let view = UIView()
-        view.backgroundColor = .red
+        view.backgroundColor = .orange
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -68,9 +68,10 @@ final class CustomTabView: UIView {
         }
     }
     
-    func animateUnderlineView(alpha: CGFloat) {
+    func animateUnderlineView(alpha: CGFloat, color: UIColor) {
         UIView.animate(withDuration: 0.2) { [self] in
             self.underlineView.alpha = alpha
+            self.underlineView.backgroundColor = color
         }
     }
 }
